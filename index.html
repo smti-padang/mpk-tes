@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MPK SMK SMTI Padang — Majelis Permusyawaratan Kelas, organisasi tertinggi siswa.">
+<title>MPK SMK SMTI Padang</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ★ PROGRESS BAR SCROLL ★ -->
+<div class="progress-bar"></div>
+
+<!-- ================================================================
+     ★ FITUR: NAVIGASI TETAP (Fixed Navbar)
+     - Logo MPK, menu desktop, hamburger mobile, drawer mobile
+     ================================================================ -->
+<nav>
+  <a href="#beranda" data-page="beranda" class="nav-logo">
+    <div class="nav-logo-icon">M</div>
+    <div class="nav-title">MPK SMK SMTI<span>Padang</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="#beranda"   data-page="beranda">Beranda</a>
+    <a href="#tentang"   data-page="tentang">Tentang</a>
+    <a href="#struktur"  data-page="struktur">Struktur</a>
+    <a href="#pemiltos"  data-page="pemiltos">Pemiltos</a>
+    <a href="#profil"    data-page="profil">Profil</a>
+    <a href="#keseruan"  data-page="keseruan">Keseruan</a>
+    <a href="#form-osis" data-page="form-osis">Form OSIS</a>
+  </div>
+  <div class="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ★ FITUR: OVERLAY & DRAWER MOBILE ★ -->
+<div class="nav-overlay" onclick="toggleNav()"></div>
+<div class="nav-drawer">
+  <a href="#beranda"   data-page="beranda">🏠 Beranda</a>
+  <a href="#tentang"   data-page="tentang">📋 Tentang MPK</a>
+  <a href="#struktur"  data-page="struktur">🏛️ Struktur Organisasi</a>
+  <div class="drawer-section">Pemilihan</div>
+  <a href="#pemiltos"  data-page="pemiltos">🗳️ Pemiltos 2026/2027</a>
+  <div class="drawer-section">Profil Angkatan</div>
+  <a href="#profil" data-page="profil" onclick="gantiTab('bp20')">BP 20</a>
+  <a href="#profil" data-page="profil" onclick="gantiTab('bp21')">BP 21</a>
+  <a href="#profil" data-page="profil" onclick="gantiTab('bp22')">BP 22</a>
+  <a href="#profil" data-page="profil" onclick="gantiTab('bp23')">BP 23</a>
+  <a href="#profil" data-page="profil" onclick="gantiTab('bp24')">BP 24</a>
+  <a href="#profil" data-page="profil" onclick="gantiTab('bp25')">BP 25</a>
+  <div class="drawer-section">Lainnya</div>
+  <a href="#keseruan"  data-page="keseruan">🎉 Keseruan MPK</a>
+  <a href="#form-osis" data-page="form-osis">📝 Form OSIS</a>
+</div>
+
+
+<!-- ================================================================
+     ★ HALAMAN 1: BERANDA + TENTANG (digabung)
+     Fitur: Hero · Statistik · About · Visi-Misi · Tugas · Program
+            Kartu navigasi · Hubungi Kami · Footer
+     ================================================================ -->
+<div id="page-beranda" class="page-panel page-wrap">
+
+  <!-- ★ FITUR: HERO SECTION ★ -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-particles">
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        Organisasi Tertinggi Siswa SMK SMTI Padang
+      </div>
+      <h1>MPK <em>SMK SMTI</em><br>Padang</h1>
+      <p class="hero-desc">Majelis Permusyawaratan Kelas — menjadi penyalur aspirasi siswa, mengawasi kinerja OSIS, dan memastikan tata kelola organisasi berjalan baik.</p>
+      <div class="hero-btns">
+        <a href="#tentang" data-page="tentang" class="btn-biru">Kenali MPK →</a>
+        <a href="#struktur" data-page="struktur" class="btn-ghost">Lihat Struktur</a>
+      </div>
+      <!-- ★ FITUR: STATISTIK ANIMASI ★ -->
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num" data-count="6" data-suffix="+">6+</div><div class="stat-label">Angkatan</div></div>
+        <div class="stat"><div class="stat-num" data-count="3">3</div><div class="stat-label">Seksi</div></div>
+        <div class="stat"><div class="stat-num" data-count="9">9</div><div class="stat-label">Tugas Utama</div></div>
+        <div class="stat"><div class="stat-num">2025</div><div class="stat-label">Periode</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: ABOUT STRIP (ringkasan MPK) ★ -->
+  <section class="section alt">
+    <div class="about-grid container reveal">
+      <div class="about-visual">
+        <h3>Majelis Permusyawaratan Kelas</h3>
+        <p>Organisasi tertinggi di SMK SMTI Padang yang menghubungkan siswa dengan sekolah.</p>
+      </div>
+      <div class="about-text">
+        <span class="section-tag">Tentang Kami</span>
+        <h2 class="section-judul">Apa itu MPK?</h2>
+        <p><strong>MPK SMK SMTI Padang</strong> merupakan organisasi tertinggi yang menjadi penyalur antara siswa dengan sekolah dan bertugas memilih Ketua &amp; Wakil Ketua OSIS serta mengawasi kinerja OSIS.</p>
+        <p>Sebagai badan legislatif di tingkat sekolah, MPK memastikan seluruh kegiatan organisasi siswa berjalan sesuai aturan dan nilai-nilai yang berlaku.</p>
+        <a href="#tentang" data-page="tentang" class="btn-biru" style="margin-top:.5rem;">Pelajari Lebih Lanjut →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: VISI MISI (ringkasan di beranda) ★ -->
+  <section class="section">
+    <div class="container">
+      <span class="section-tag reveal">Visi &amp; Misi</span>
+      <h2 class="section-judul reveal">Visi &amp; Misi MPK</h2>
+      <div class="visi-grid stagger">
+        <div class="visi-card visi" data-word="VISI">
+          <h3>Visi</h3>
+          <p>Mewujudkan MPK SMK SMTI Padang yang aktif, transparan, dan bertanggung jawab dalam mengawasi serta mendukung kinerja OSIS demi kemajuan sekolah.</p>
+        </div>
+        <div class="visi-card misi" data-word="MISI">
+          <h3>Misi</h3>
+          <ul>
+            <li>Mengawasi dan mengevaluasi seluruh program kerja OSIS secara objektif</li>
+            <li>Menjadi jembatan komunikasi antara siswa dan sekolah</li>
+            <li>Menyelenggarakan pemilihan ketua OSIS yang demokratis dan transparan</li>
+            <li>Meningkatkan kualitas organisasi siswa dari masa ke masa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: KARTU NAVIGASI HALAMAN UTAMA ★ -->
+  <section class="section alt">
+    <div class="container">
+      <span class="section-tag reveal">Jelajahi</span>
+      <h2 class="section-judul reveal">Halaman Utama</h2>
+      <div class="highlights-grid stagger">
+        <a href="#tentang"   data-page="tentang"   class="hl-card"><div class="hl-icon">📋</div><h3>Tentang MPK</h3><p>Tugas, fungsi, visi-misi, dan program kerja Majelis Permusyawaratan Kelas SMK SMTI Padang.</p><div class="hl-link">Baca Selengkapnya →</div></a>
+        <a href="#struktur"  data-page="struktur"  class="hl-card"><div class="hl-icon">🏛️</div><h3>Struktur Organisasi</h3><p>Susunan pengurus MPK periode 2025/2026 beserta jabatan dan seksi-seksinya.</p><div class="hl-link">Lihat Struktur →</div></a>
+        <a href="#pemiltos"  data-page="pemiltos"  class="hl-card"><div class="hl-icon">🗳️</div><h3>Pemiltos</h3><p>Pendaftaran dan informasi Pemilihan Ketua &amp; Wakil Ketua OSIS periode mendatang.</p><div class="hl-link">Selengkapnya →</div></a>
+        <a href="#profil"    data-page="profil"    class="hl-card"><div class="hl-icon">👥</div><h3>Profil Anggota</h3><p>Mengenal anggota MPK dari berbagai angkatan: BP 20 hingga BP 25.</p><div class="hl-link">Lihat Profil →</div></a>
+        <a href="#keseruan"  data-page="keseruan"  class="hl-card"><div class="hl-icon">🎉</div><h3>Keseruan MPK</h3><p>Dokumentasi kegiatan dan momen-momen seru bersama anggota MPK SMTI Padang.</p><div class="hl-link">Lihat Keseruan →</div></a>
+        <a href="#form-osis" data-page="form-osis" class="hl-card"><div class="hl-icon">📝</div><h3>Form OSIS</h3><p>Sampaikan laporan, masukan, atau pengaduan terkait kinerja OSIS kepada MPK.</p><div class="hl-link">Buka Form →</div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: HUBUNGI KAMI — BERANDA ★ -->
+  <section class="kontak-section">
+    <div class="container">
+      <span class="section-tag reveal">Hubungi Kami</span>
+      <h2 class="section-judul reveal">Kontak &amp; Lokasi</h2>
+      <div class="kontak-grid stagger">
+        <div class="kontak-card"><div class="kontak-ikon">📍</div><h4>Alamat</h4><p>Jl. Ir. H. Juanda No.2<br>Padang, Sumatera Barat</p></div>
+        <div class="kontak-card"><div class="kontak-ikon">📞</div><h4>Telepon</h4><p>(0751) 705322<br>Fax. 075141924</p><a href="tel:0751705322">Hubungi Sekarang</a></div>
+        <div class="kontak-card"><div class="kontak-ikon">✉️</div><h4>Aspirasi &amp; Laporan</h4><p>Sampaikan masukan dan pengaduan melalui Form OSIS kami</p><a href="#form-osis" data-page="form-osis">Buka Form OSIS →</a></div>
+      </div>
+      <div class="kontak-map reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.534!2d100.35024!3d-0.9171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b97f07867565%3A0xaeeffc6786b57568!2sSMK%20SMTI%20Padang!5e0!3m2!1sid!2sid!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi SMK SMTI Padang"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="footer-inner"><div class="footer-brand"><h3>MPK SMK SMTI Padang</h3><p>Majelis Permusyawaratan Kelas<br>SMK SMTI Padang · Jl. Ir. H. Juanda No.2, Padang<br>Telp. (0751) 705322 · Fax. 075141924</p></div><div class="footer-col"><h4>Halaman</h4><a href="#tentang" data-page="tentang">Tentang MPK</a><a href="#struktur" data-page="struktur">Struktur</a><a href="#pemiltos" data-page="pemiltos">Pemiltos</a><a href="#profil" data-page="profil">Profil Anggota</a></div><div class="footer-col"><h4>Lainnya</h4><a href="#keseruan" data-page="keseruan">Keseruan MPK</a><a href="#form-osis" data-page="form-osis">Form OSIS</a></div></div><div class="footer-bottom"><span>© 2025 MPK SMK SMTI Padang. Seluruh hak dilindungi.</span><span>Periode 2024/2025</span></div></footer>
+</div><!-- /page-beranda -->
+
+
+<!-- ================================================================
+     ★ HALAMAN 2: TENTANG MPK (detail)
+     Fitur: Deskripsi · Visi-Misi · Tugas Pokok · Program Kerja
+            Hubungi Kami · Footer
+     ================================================================ -->
+<div id="page-tentang" class="page-panel page-wrap">
+  <div class="page-hero" data-title="TENTANG">
+    <div class="container">
+      <span class="section-tag">Tentang Kami</span>
+      <h1>MPK <em>SMK SMTI</em> Padang</h1>
+      <p>Mengenal lebih dalam organisasi tertinggi siswa di SMK SMTI Padang — tugas, program kerja, dan visi misinya.</p>
+    </div>
+  </div>
+
+  <!-- ★ FITUR: DESKRIPSI ORGANISASI ★ -->
+  <section class="section alt">
+    <div class="container">
+      <span class="section-tag reveal">Profil Organisasi</span>
+      <h2 class="section-judul reveal">Apa itu MPK SMK SMTI Padang?</h2>
+      <p class="section-sub reveal">MPK SMK SMTI Padang merupakan organisasi tertinggi di SMK SMTI Padang yang menjadi penyalur antara siswa dengan sekolah dan bertugas memilih Ketua dan Wakil Ketua OSIS serta mengawasi kinerja OSIS.</p>
+      <p class="reveal" style="margin-top:1rem;font-size:1rem;color:var(--teks-abu);line-height:1.85;">Sebagai badan legislatif di tingkat sekolah, MPK memastikan seluruh kegiatan organisasi siswa berjalan sesuai dengan aturan dan nilai-nilai yang berlaku. MPK juga berperan aktif dalam menjembatani komunikasi antara siswa, OSIS, dan pihak sekolah demi terciptanya lingkungan belajar yang kondusif dan organisasi yang akuntabel.</p>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: VISI MISI LENGKAP ★ -->
+  <section class="section">
+    <div class="container">
+      <span class="section-tag reveal">Visi &amp; Misi</span>
+      <h2 class="section-judul reveal">Visi &amp; Misi MPK</h2>
+      <div class="visi-grid stagger">
+        <div class="visi-card visi" data-word="VISI"><h3>Visi</h3><p>Mewujudkan MPK SMK SMTI Padang yang aktif, transparan, dan bertanggung jawab dalam mengawasi serta mendukung kinerja OSIS demi kemajuan sekolah.</p></div>
+        <div class="visi-card misi" data-word="MISI"><h3>Misi</h3><ul><li>Mengawasi dan mengevaluasi seluruh program kerja OSIS secara objektif</li><li>Menjadi jembatan komunikasi antara siswa dan sekolah</li><li>Menyelenggarakan pemilihan ketua OSIS yang demokratis dan transparan</li><li>Meningkatkan kualitas organisasi siswa dari masa ke masa</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: 9 TUGAS POKOK MPK ★ -->
+  <section class="section alt" id="tugas">
+    <div class="container">
+      <span class="section-tag reveal">Tugas Pokok</span>
+      <h2 class="section-judul reveal">Tugas MPK Secara Keseluruhan</h2>
+      <p class="section-sub reveal">Sembilan tugas utama yang menjadi tanggung jawab Majelis Permusyawaratan Kelas.</p>
+      <div class="tugas-grid stagger">
+        <div class="tugas-card"><div class="tugas-num">1</div><p>Mengawasi, memantau, dan membantu kinerja OSIS dalam melaksanakan program-programnya.</p></div>
+        <div class="tugas-card"><div class="tugas-num">2</div><p>Mengevaluasi kinerja OSIS secara berkala dan menyeluruh.</p></div>
+        <div class="tugas-card"><div class="tugas-num">3</div><p>Mengadakan dan menyiapkan Rapat Pleno bersama seluruh pihak terkait.</p></div>
+        <div class="tugas-card"><div class="tugas-num">4</div><p>Menyiapkan orasi pemilihan Ketua MPK periode berikutnya.</p></div>
+        <div class="tugas-card"><div class="tugas-num">5</div><p>Menyiapkan orasi pemilihan Ketua OSIS periode berikutnya.</p></div>
+        <div class="tugas-card"><div class="tugas-num">6</div><p>Menyeleksi calon anggota OSIS dan MPK untuk masa jabatan berikutnya.</p></div>
+        <div class="tugas-card"><div class="tugas-num">7</div><p>Mengadakan PKO-PKM untuk calon ketua OSIS dan MPK.</p></div>
+        <div class="tugas-card"><div class="tugas-num">8</div><p>Memilih calon ketua OSIS dan MPK yang akan melaksanakan orasi.</p></div>
+        <div class="tugas-card" style="grid-column:1/-1;"><div class="tugas-num">9</div><p>Tugas tambahan lainnya baik yang terprogram maupun yang insidental — contoh: membersihkan lingkungan sekolah atas inisiatif MPK sendiri.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: PROGRAM KERJA ★ -->
+  <section class="section" id="program">
+    <div class="container">
+      <span class="section-tag reveal">Program Kerja</span>
+      <h2 class="section-judul reveal">Program Kerja MPK</h2>
+      <p class="section-sub reveal">Rencana kerja MPK yang dibagi menjadi program umum dan program khusus.</p>
+      <div style="margin-top:2rem;">
+        <div class="prog-item reveal"><h3>1. Program MPK Secara Umum</h3><ul class="prog-sublist"><li>Majelis Permusyawaratan Kelas (MPK) memiliki tugas yakni mengawasi setiap program kerja OSIS dan menindak lanjuti apabila terjadi kekeliruan dengan cara mengevaluasi hasil kegiatan.</li><li>Diluruskan bersama, diperbaiki, dan ditingkatkan di masa mendatang.</li></ul></div>
+        <div class="prog-item reveal"><h3>2. Program MPK Secara Khusus</h3><ul class="prog-sublist"><li>Mengumpulkan pihak yang terkait dalam musyawarah khusus untuk meluruskan suatu program kerja OSIS agar terlaksana dengan baik.</li><li>Mengadakan laporan kegiatan OSIS setiap bulan.</li><li>Mengadakan laporan pertanggungjawaban OSIS pada pertengahan jabatan.</li><li>Mengadakan laporan pertanggungjawaban OSIS pada akhir kepengurusan.</li><li>Memberikan laporan hasil pengawasan MPK kepada OSIS.</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: HUBUNGI KAMI ★ -->
+  <section class="kontak-section">
+    <div class="container">
+      <span class="section-tag">Hubungi Kami</span>
+      <h2 class="section-judul">Kontak &amp; Lokasi</h2>
+      <div class="kontak-grid stagger">
+        <div class="kontak-card"><div class="kontak-ikon">📍</div><h4>Alamat</h4><p>Jl. Ir. H. Juanda No.2<br>Padang, Sumatera Barat</p></div>
+        <div class="kontak-card"><div class="kontak-ikon">📞</div><h4>Telepon</h4><p>(0751) 705322<br>Fax. 075141924</p><a href="tel:0751705322">Hubungi Sekarang</a></div>
+        <div class="kontak-card"><div class="kontak-ikon">✉️</div><h4>Aspirasi</h4><p>Sampaikan masukan melalui Form OSIS</p><a href="#form-osis" data-page="form-osis">Buka Form →</a></div>
+      </div>
+    </div>
+  </section>
+  <footer><div class="footer-inner"><div class="footer-brand"><h3>MPK SMK SMTI Padang</h3><p>Jl. Ir. H. Juanda No.2, Padang<br>Telp. (0751) 705322</p></div><div class="footer-col"><h4>Halaman</h4><a href="#beranda" data-page="beranda">Beranda</a><a href="#struktur" data-page="struktur">Struktur</a><a href="#pemiltos" data-page="pemiltos">Pemiltos</a></div><div class="footer-col"><h4>Lainnya</h4><a href="#profil" data-page="profil">Profil</a><a href="#keseruan" data-page="keseruan">Keseruan</a><a href="#form-osis" data-page="form-osis">Form OSIS</a></div></div><div class="footer-bottom"><span>© 2025 MPK SMK SMTI Padang.</span><span>Periode 2024/2025</span></div></footer>
+</div><!-- /page-tentang -->
+
+
+<!-- ================================================================
+     ★ HALAMAN 3: STRUKTUR ORGANISASI
+     Fitur: Bagan · Pengurus Inti (foto dari folder) · Seksi-seksi
+            Hubungi Kami · Footer
+     ================================================================ -->
+<div id="page-struktur" class="page-panel page-wrap">
+  <div class="page-hero" data-title="STRUKTUR">
+    <div class="container">
+      <span class="section-tag">Struktur Organisasi</span>
+      <h1>Struktur MPK<br><em>SMTI Padang</em></h1>
+      <p>Susunan pengurus Majelis Permusyawaratan Kelas SMK SMTI Padang periode 2025/2026.</p>
+    </div>
+  </div>
+
+  <!-- ★ FITUR: BAGAN STRUKTUR ★ -->
+  <section class="section alt">
+    <div class="container">
+      <span class="section-tag reveal">Bagan Organisasi</span>
+      <h2 class="section-judul reveal">Bagan Struktur</h2>
+      <div style="margin-top:2.5rem;" class="reveal">
+        <div class="bagan">
+          <div class="bagan-row"><div class="bagan-node top">Ketua MPK</div></div>
+          <div class="bagan-line"></div>
+          <div class="bagan-row"><div class="bagan-node mid">Wakil Ketua</div></div>
+          <div class="bagan-line"></div>
+          <div class="bagan-row"><div class="bagan-node mid">Sekretaris</div></div>
+          <div class="bagan-line"></div>
+          <div class="bagan-hline"><div style="width:2px;height:28px;background:var(--border);position:absolute;"></div></div>
+          <div class="bagan-row" style="gap:3rem;">
+            <div class="bagan-node">Seksi Kampanye</div>
+            <div class="bagan-node">Seksi Perekrut</div>
+            <div class="bagan-node">Seksi Pengawas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: PENGURUS INTI — dengan foto dari folder ★ -->
+  <section class="section">
+    <div class="container">
+      <div class="periode-badge reveal">Periode 2025/2026 · BP 23</div>
+      <span class="section-tag reveal">Pengurus Inti</span>
+      <h2 class="section-judul reveal">Susunan Pengurus Inti</h2>
+      <p class="reveal" style="font-size:13px;color:var(--teks-abu);margin-bottom:1.5rem;">
+        💡 <strong>Cara menambah foto:</strong> Buat folder <code>foto/</code> lalu uncomment tag
+        <code>&lt;img&gt;</code> di setiap kartu. Foto otomatis bulat.
+      </p>
+
+      <!-- ★ FITUR: KARTU JABATAN INTI ★ -->
+      <div class="inti-grid stagger">
+        <!-- Ketua -->
+        <div class="inti-card ketua">
+          <div class="jabatan-badge">Ketua MPK</div>
+          <div class="inti-avatar">
+            <!-- Uncomment baris di bawah saat foto tersedia: -->
+            <img src="foto/ahlan-napira.jpg" alt="Ahlan Napira">
+            A
+          </div>
+          <div class="nama">Ahlan Napira</div>
+          <div class="kelas">BP 23</div>
+        </div>
+        <!-- Wakil Ketua -->
+        <div class="inti-card">
+          <div class="jabatan-badge">Wakil Ketua</div>
+          <div class="inti-avatar">
+            <img src="foto/dohriansyah.jpg" alt="Dohriansyah">
+            D
+          </div>
+          <div class="nama">Dohriansyah</div>
+          <div class="kelas">BP 23</div>
+        </div>
+        <!-- Sekretaris -->
+        <div class="inti-card">
+          <div class="jabatan-badge">Sekretaris</div>
+          <div class="inti-avatar">
+            <img src="foto/sekretaris.jpg" alt="Sekretaris">
+            S
+          </div>
+          <div class="nama">Sekretaris</div>
+          <div class="kelas">BP 23</div>
+        </div>
+      </div>
+
+      <!-- ★ FITUR: SEKSI KAMPANYE ★ -->
+      <div class="seksi-block reveal">
+        <div class="seksi-header"><h3>Seksi Kampanye</h3><p>Bertanggung jawab atas kampanye dan sosialisasi pemilihan OSIS</p></div>
+        <div class="seksi-anggota stagger">
+          <div class="anggota-card"><div class="anggota-avatar"><img src="foto/garusa-putri.jpg" alt="Garusa Putri"> -->G</div><div class="peran">Koordinator</div><div class="nama">Garusa Putri</div><div class="kelas">BP 23</div></div>
+          <div class="anggota-card"><div class="anggota-avatar"><img src="foto/anggota1.jpg" alt="Anggota 1"> -->A</div><div class="peran">Anggota</div><div class="nama">Anggota 1</div><div class="kelas">BP 23</div></div>
+          <div class="anggota-card"><div class="anggota-avatar"><img src="foto/anggota2.jpg" alt="Anggota 2"> -->B</div><div class="peran">Anggota</div><div class="nama">Anggota 2</div><div class="kelas">BP 23</div></div>
+        </div>
+      </div>
+
+      <!-- ★ FITUR: SEKSI PEREKRUT ★ -->
+      <div class="seksi-block reveal">
+        <div class="seksi-header"><h3>Seksi Perekrut</h3><p>Bertanggung jawab atas seleksi dan rekrutmen anggota OSIS &amp; MPK</p></div>
+        <div class="seksi-anggota stagger">
+          <div class="anggota-card"><div class="anggota-avatar"><img src="foto/pavela.jpg" alt="Pavela"> -->P</div><div class="peran">Koordinator</div><div class="nama">Pavela Rian P.</div><div class="kelas">BP 23</div></div>
+          <div class="anggota-card"><div class="anggota-avatar"><img src="foto/zhyvano.jpg" alt="Zhyvano"> -->Z</div><div class="peran">Anggota</div><div class="nama">Zhyvano</div><div class="kelas">BP 23</div></div>
+          <div class="anggota-card"><div class="anggota-avatar"><img src="foto/anggota3.jpg" alt="Anggota 3"> -->C</div><div class="peran">Anggota</div><div class="nama">Anggota 3</div><div class="kelas">BP 23</div></div>
+        </div>
+      </div>
+
+      <!-- ★ FITUR: SEKSI PENGAWAS ★ -->
+      <div class="seksi-block reveal">
+        <div class="seksi-header"><h3>Seksi Pengawas</h3><p>Bertanggung jawab atas pengawasan kinerja OSIS dan laporan pertanggungjawaban</p></div>
+        <div class="seksi-anggota stagger">
+          <div class="anggota-card"><div class="anggota-avatar"><img src="foto/lathfa.jpg" alt="Lathfa"> -->L</div><div class="peran">Koordinator</div><div class="nama">Lathfa Bandti</div><div class="kelas">BP 23</div></div>
+          <div class="anggota-card"><div class="anggota-avatar"><img src="foto/anggota4.jpg" alt="Anggota 4"> -->F</div><div class="peran">Anggota</div><div class="nama">Anggota 4</div><div class="kelas">BP 23</div></div>
+          <div class="anggota-card"><div class="anggota-avatar"><img src="foto/anggota5.jpg" alt="Anggota 5"> -->R</div><div class="peran">Anggota</div><div class="nama">Anggota 5</div><div class="kelas">BP 23</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: HUBUNGI KAMI ★ -->
+    <section class="kontak-section">
+    <div class="container">
+      <div class="kontak-label-row reveal">
+        <span class="kontak-dash">——</span>
+        <span class="kontak-label-text">HUBUNGI KAMI</span>
+      </div>
+      <h2 class="section-judul reveal" style="color:#fff;margin-bottom:.5rem;">Kontak &amp; Lokasi</h2>
+      <p class="reveal" style="color:rgba(255,255,255,.55);margin-bottom:2rem;">Hubungi kami untuk informasi kegiatan atau bergabung menjadi anggota.</p>
+      <div class="sekretariat-card reveal">
+        <h3 class="sekretariat-title">Sekretariat MPK</h3>
+        <div class="sekretariat-row">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">📍</span></div>
+          <div><div class="sekretariat-key">ALAMAT</div><div class="sekretariat-val">Jl. Ir. H. Juanda No.2, Padang Barat, Kota Padang, Sumatera Barat 25129</div></div>
+        </div>
+        <div class="sekretariat-row">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">🏫</span></div>
+          <div><div class="sekretariat-key">SEKOLAH</div><div class="sekretariat-val">SMK SMTI Padang — Kementerian Perindustrian RI</div></div>
+        </div>
+        <div class="sekretariat-row">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">📷</span></div>
+          <div><div class="sekretariat-key">INSTAGRAM</div><div class="sekretariat-val">@mpk_smksmtipadang</div></div>
+        </div>
+        <div class="sekretariat-row">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">✉️</span></div>
+          <div><div class="sekretariat-key">EMAIL</div><div class="sekretariat-val">mpksmksmtipadang@gmail.com</div></div>
+        </div>
+        <div class="sekretariat-row" style="border-bottom:none;">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">🕐</span></div>
+          <div><div class="sekretariat-key">JAM AKTIF</div><div class="sekretariat-val">Senin – Jumat, 07.30 – 15.30 WIB</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer><div class="footer-inner"><div class="footer-brand"><h3>MPK SMK SMTI Padang</h3><p>Jl. Ir. H. Juanda No.2, Padang · Telp. (0751) 705322</p></div><div class="footer-col"><h4>Halaman</h4><a href="#beranda" data-page="beranda">Beranda</a><a href="#tentang" data-page="tentang">Tentang</a><a href="#pemiltos" data-page="pemiltos">Pemiltos</a></div><div class="footer-col"><h4>Lainnya</h4><a href="#profil" data-page="profil">Profil</a><a href="#keseruan" data-page="keseruan">Keseruan</a><a href="#form-osis" data-page="form-osis">Form OSIS</a></div></div><div class="footer-bottom"><span>© 2025 MPK SMK SMTI Padang.</span><span>Periode 2024/2025</span></div></footer>
+</div><!-- /page-struktur -->
+
+
+<!-- ================================================================
+     ★ HALAMAN 4: PEMILTOS 2026/2027
+     Fitur: Hero countdown · Kartu daftar · Google Form embed
+            Unduh formulir · Timeline tahapan · Hubungi Kami
+     ================================================================ -->
+<div id="page-pemiltos" class="page-panel page-wrap">
+
+  <!-- ★ FITUR: HERO PEMILTOS + COUNTDOWN ★ -->
+  <div class="pemiltos-hero">
+    <div style="position:relative;z-index:1;" class="container">
+      <span class="section-tag">Pemilihan Ketua &amp; Wakil Ketua OSIS</span>
+      <h1>Pemiltos <em>2026</em><br>/ 2027</h1>
+      <p>Saatnya tampil sebagai pemimpin! Daftarkan diri Anda sebagai calon pemimpin OSIS SMK SMTI Padang periode 2026/2027.</p>
+      <div class="countdown-wrap" id="countdown-pemiltos">
+        <div class="cd-item"><div class="cd-num" id="cd-pemiltos-hari">--</div><div class="cd-label">Hari</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-item"><div class="cd-num" id="cd-pemiltos-jam">--</div><div class="cd-label">Jam</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-item"><div class="cd-num" id="cd-pemiltos-menit">--</div><div class="cd-label">Menit</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-item"><div class="cd-num" id="cd-pemiltos-detik">--</div><div class="cd-label">Detik</div></div>
+      </div>
+      <p style="margin-top:1rem;font-size:12px;color:rgba(255,255,255,.4);">Menuju Hari Pemilihan</p>
+    </div>
+  </div>
+
+  <!-- ★ FITUR: KARTU PENDAFTARAN CAKETOS & CAWAKETOS ★ -->
+  <section class="section alt">
+    <div class="container">
+      <span class="section-tag reveal">Pendaftaran</span>
+      <h2 class="section-judul reveal">Daftarkan Diri Anda</h2>
+      <div class="daftar-grid stagger">
+        <div class="daftar-card caketos" id="caketos">
+          <div class="daftar-card-top" data-num="01"><div class="daftar-label">Caketos</div><h2>Calon Ketua OSIS</h2><p>Pemimpin utama organisasi siswa yang bertanggung jawab atas seluruh program kerja OSIS.</p></div>
+          <div class="daftar-card-body"><p style="font-size:12px;font-weight:700;color:var(--teks);margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.06em;">Persyaratan Umum</p>
+            <ul class="syarat-list"><li>Siswa aktif SMK SMTI Padang</li><li>Mendapat persetujuan orang tua/wali</li><li>Memiliki nilai akademik yang baik</li><li>Bersedia menjalani masa seleksi PKO-PKM</li><li>Tidak sedang dalam sanksi akademik</li></ul>
+            <a href="#" onclick="bukaFormulir('caketos');return false;" class="btn-daftar">DAFTAR SEKARANG</a>
+          </div>
+        </div>
+        <div class="daftar-card cawaketos" id="cawaketos">
+          <div class="daftar-card-top" data-num="02"><div class="daftar-label">Cawaketos</div><h2>Calon Wakil Ketua</h2><p>Pendamping Ketua OSIS yang membantu koordinasi dan pelaksanaan program kerja organisasi.</p></div>
+          <div class="daftar-card-body"><p style="font-size:12px;font-weight:700;color:var(--teks);margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.06em;">Persyaratan Umum</p>
+            <ul class="syarat-list"><li>Siswa aktif SMK SMTI Padang</li><li>Mendapat persetujuan orang tua/wali</li><li>Memiliki nilai akademik yang baik</li><li>Bersedia menjalani masa seleksi PKO-PKM</li><li>Tidak sedang dalam sanksi akademik</li></ul>
+            <a href="#" onclick="bukaFormulir('cawaketos');return false;" class="btn-daftar">DAFTAR SEKARANG</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: GOOGLE FORM EMBED + UNDUH FORMULIR ★ -->
+  <section class="section" id="formulir-section">
+    <div class="container">
+      <span class="section-tag reveal">Formulir Pendaftaran</span>
+      <h2 class="section-judul reveal">Formulir Isian</h2>
+      <p class="section-sub reveal" style="margin-bottom:1.5rem;">Isi formulir resmi MPK SMK SMTI Padang. Pilih tab sesuai jabatan yang didaftarkan. Admin: isi link di <code>script.js → GFORM</code>.</p>
+
+      <div class="formulir-tabs reveal">
+        <button class="formulir-tab aktif caketos"   id="ftab-caketos"   onclick="bukaFormulir('caketos')">🔵 Formulir Caketos</button>
+        <button class="formulir-tab"                 id="ftab-cawaketos" onclick="bukaFormulir('cawaketos')">🔴 Formulir Cawaketos</button>
+      </div>
+
+      <!-- Panel Caketos -->
+      <div class="form-panel aktif" id="form-panel-caketos">
+        <div class="gform-wrap" id="gform-wrap-caketos"><!-- diisi JS --></div>
+        <div class="formulir-aksi">
+          <button class="btn-unduh" onclick="unduhFormulir('caketos')">⬇ Unduh Formulir Caketos</button>
+          <a href="#" id="btn-buka-caketos" target="_blank" rel="noopener" class="btn-tab-baru">↗ Buka di Tab Baru</a>
+        </div>
+      </div>
+
+      <!-- Panel Cawaketos -->
+      <div class="form-panel" id="form-panel-cawaketos">
+        <div class="gform-wrap" id="gform-wrap-cawaketos"><!-- diisi JS --></div>
+        <div class="formulir-aksi">
+          <button class="btn-unduh" onclick="unduhFormulir('cawaketos')" style="border-color:var(--merah);color:var(--merah);">⬇ Unduh Formulir Cawaketos</button>
+          <a href="#" id="btn-buka-cawaketos" target="_blank" rel="noopener" class="btn-tab-baru merah">↗ Buka di Tab Baru</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: TIMELINE TAHAPAN PEMILIHAN ★ -->
+  <section class="section alt">
+    <div class="container">
+      <span class="section-tag reveal">Jadwal</span>
+      <h2 class="section-judul reveal">Tahapan Pemilihan</h2>
+      <div class="timeline">
+        <div class="tl-item done reveal"><div class="tl-dot"></div><div class="tl-date">Tahap 1</div><h4>Pengumuman Pemilihan</h4><p>MPK mengumumkan pembukaan pendaftaran calon ketua dan wakil ketua OSIS.</p></div>
+        <div class="tl-item done reveal"><div class="tl-dot"></div><div class="tl-date">Tahap 2</div><h4>Masa Pendaftaran</h4><p>Siswa yang berminat mengambil dan mengisi formulir pendaftaran beserta kelengkapan dokumen.</p></div>
+        <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-date">Tahap 3</div><h4>Seleksi Berkas</h4><p>MPK melakukan seleksi dokumen dan berkas pendaftaran dari setiap calon pendaftar.</p></div>
+        <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-date">Tahap 4</div><h4>PKO-PKM</h4><p>Pelaksanaan Pelatihan Kepemimpinan OSIS dan Majelis bagi calon yang lolos seleksi berkas.</p></div>
+        <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-date">Tahap 5</div><h4>Orasi &amp; Pemilihan</h4><p>Calon menyampaikan visi-misi di hadapan seluruh siswa, dilanjutkan dengan pemilihan demokratis.</p></div>
+        <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-date">Tahap 6</div><h4>Pelantikan</h4><p>Pelantikan Ketua dan Wakil Ketua OSIS terpilih oleh Kepala Sekolah SMK SMTI Padang.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: HUBUNGI KAMI ★ -->
+  <section class="kontak-section"><div class="container"><span class="section-tag">Hubungi Kami</span><h2 class="section-judul">Kontak &amp; Lokasi</h2><div class="kontak-grid stagger"><div class="kontak-card"><div class="kontak-ikon">📍</div><h4>Alamat</h4><p>Jl. Ir. H. Juanda No.2<br>Padang, Sumatera Barat</p></div><div class="kontak-card"><div class="kontak-ikon">📞</div><h4>Telepon</h4><p>(0751) 705322<br>Fax. 075141924</p></div><div class="kontak-card"><div class="kontak-ikon">✉️</div><h4>Aspirasi</h4><p>Sampaikan masukan melalui Form OSIS</p><a href="#form-osis" data-page="form-osis">Buka Form →</a></div></div></div></section>
+  <footer><div class="footer-inner"><div class="footer-brand"><h3>MPK SMK SMTI Padang</h3><p>Jl. Ir. H. Juanda No.2, Padang · Telp. (0751) 705322</p></div><div class="footer-col"><h4>Halaman</h4><a href="#beranda" data-page="beranda">Beranda</a><a href="#tentang" data-page="tentang">Tentang</a><a href="#struktur" data-page="struktur">Struktur</a></div><div class="footer-col"><h4>Lainnya</h4><a href="#profil" data-page="profil">Profil</a><a href="#keseruan" data-page="keseruan">Keseruan</a><a href="#form-osis" data-page="form-osis">Form OSIS</a></div></div><div class="footer-bottom"><span>© 2025 MPK SMK SMTI Padang.</span><span>Periode 2024/2025</span></div></footer>
+</div><!-- /page-pemiltos -->
+
+
+<!-- ================================================================
+     ★ HALAMAN 5: PROFIL ANGGOTA
+     Fitur: Tab BP 20–25 · Foto banner (background-image) · Foto profil
+            Ketua featured · Grid anggota · Hubungi Kami
+     ================================================================ -->
+<div id="page-profil" class="page-panel page-wrap">
+  <div class="page-hero" data-title="PROFIL">
+    <div class="container">
+      <span class="section-tag">Profil Anggota</span>
+      <h1>Anggota <em>MPK</em><br>Per Angkatan</h1>
+      <p>Mengenal lebih dekat anggota MPK SMK SMTI Padang dari berbagai angkatan.</p>
+    </div>
+  </div>
+
+  <!-- ★ FITUR: TAB ANGKATAN (BP 20–BP 25) ★ -->
+  <div class="bp-nav">
+    <div class="bp-nav-inner">
+      <a class="bp-tab" data-bp="bp20" onclick="gantiTab('bp20',event)">BP 20</a>
+      <a class="bp-tab" data-bp="bp21" onclick="gantiTab('bp21',event)">BP 21</a>
+      <a class="bp-tab" data-bp="bp22" onclick="gantiTab('bp22',event)">BP 22</a>
+      <a class="bp-tab" data-bp="bp23" onclick="gantiTab('bp23',event)">BP 23</a>
+      <a class="bp-tab" data-bp="bp24" onclick="gantiTab('bp24',event)">BP 24</a>
+      <a class="bp-tab" data-bp="bp25" onclick="gantiTab('bp25',event)">BP 25</a>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+            <!-- ★ BP 20 ★ -->
+      <div class="bp-panel" id="bp20">
+        <div class="group-banner reveal" data-bp="BP20">
+          <div class="tahun">Angkatan 2020</div>
+          <h2>Anggota MPK BP 20</h2>
+          <p>Generasi pertama yang membuka jejak kepemimpinan MPK SMK SMTI Padang</p>
+        </div>
+        <div class="ketua-featured reveal">
+          <div class="ketua-avatar"><img src="asset/galeri/profil/bp20/Maulana%20Ksatria%20Nanggroe.jpg" alt="Maulana Ksatria Nanggroe" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+          <div><div class="jabatan">⭐ Ketua MPK BP 20</div><h3>Maulana Ksatria Nanggroe</h3><p>Memimpin MPK periode angkatan 2020 dengan semangat dan dedikasi tinggi dalam mengawal kinerja OSIS SMK SMTI Padang.</p></div>
+        </div>
+        <div class="anggota-grid stagger">
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="D"><img src="asset/galeri/profil/bp20/Desy%20Putri%20Maharani.jpg" alt="Desy Putri Maharani" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Desy Putri Maharani</div><div class="kelas">BP 20</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="D"><img src="asset/galeri/profil/bp20/Dewi%20Hijrah%20Septhia%20Ningrum.jpg" alt="Dewi Hijrah Septhia Ningrum" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Dewi Hijrah Septhia Ningrum</div><div class="kelas">BP 20</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="J"><img src="asset/galeri/profil/bp20/Jovianes%20Satria.jpg" alt="Jovianes Satria" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Jovianes Satria</div><div class="kelas">BP 20</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="N"><img src="asset/galeri/profil/bp20/Nayla%20Leo%20Melza.jpg" alt="Nayla Leo Melza" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Nayla Leo Melza</div><div class="kelas">BP 20</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="N"><img src="asset/galeri/profil/bp20/Noufal%20Rendi.jpg" alt="Noufal Rendi" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Noufal Rendi</div><div class="kelas">BP 20</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="S"><img src="asset/galeri/profil/bp20/Septialdo.jpg" alt="Septialdo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Septialdo</div><div class="kelas">BP 20</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="S"><img src="asset/galeri/profil/bp20/Suci%20Hentha%20Wahyuli.jpg" alt="Suci Hentha Wahyuli" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Suci Hentha Wahyuli</div><div class="kelas">BP 20</div></div></div>
+        </div>
+      </div>
+
+            <!-- ★ BP 21 ★ -->
+      <div class="bp-panel" id="bp21">
+        <div class="group-banner reveal" data-bp="BP21">
+          <div class="tahun">Angkatan 2021</div>
+          <h2>Anggota MPK BP 21</h2>
+          <p>Generasi penerus yang memperkuat fondasi organisasi MPK SMK SMTI Padang</p>
+        </div>
+        <div class="ketua-featured reveal">
+          <div class="ketua-avatar"><img src="asset/galeri/profil/bp21/Muhammad%20Arik%20Al-Buchory.jpg" alt="Muhammad Arik Al-Buchory" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+          <div><div class="jabatan">⭐ Ketua MPK BP 21</div><h3>Muhammad Arik Al-Buchory</h3><p>Memimpin MPK periode angkatan 2021 dengan fokus pada penguatan sistem pengawasan OSIS dan peningkatan kualitas organisasi.</p></div>
+        </div>
+        <div class="anggota-grid stagger">
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="A"><img src="asset/galeri/profil/bp21/Adam%20Rulian.jpg" alt="Adam Rulian" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Adam Rulian</div><div class="kelas">BP 21</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="M"><img src="asset/galeri/profil/bp21/Marshanda%20Regina%20Putri%20P..jpg" alt="Marshanda Regina Putri P." style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Marshanda Regina Putri P.</div><div class="kelas">BP 21</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="M"><img src="asset/galeri/profil/bp21/Muhammad%20Iqbal.jpg" alt="Muhammad Iqbal" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Muhammad Iqbal</div><div class="kelas">BP 21</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="Y"><img src="asset/galeri/profil/bp21/Yovita%20Amelya.jpg" alt="Yovita Amelya" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Yovita Amelya</div><div class="kelas">BP 21</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="Y"><img src="asset/galeri/profil/bp21/Yulia%20%20Dewi%20Safitri.jpg" alt="Yulia Dewi Safitri" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Yulia Dewi Safitri</div><div class="kelas">BP 21</div></div></div>
+        </div>
+      </div>
+
+            <!-- ★ BP 22 ★ -->
+      <div class="bp-panel" id="bp22">
+        <div class="group-banner reveal" data-bp="BP22">
+          <div class="tahun">Angkatan 2022</div>
+          <h2>Anggota MPK BP 22</h2>
+          <p>Generasi yang terus berinovasi dalam meningkatkan kinerja organisasi siswa</p>
+        </div>
+        <div class="ketua-featured reveal">
+          <div class="ketua-avatar"><img src="asset/galeri/profil/bp22/Fathurrahman%20Al%20Faraby.jpg" alt="Fathurrahman Al Faraby" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+          <div><div class="jabatan">⭐ Ketua MPK BP 22</div><h3>Fathurrahman Al Faraby</h3><p>Memimpin MPK periode angkatan 2022 dengan inovasi dan semangat baru dalam membangun organisasi yang lebih transparan dan akuntabel.</p></div>
+        </div>
+        <div class="anggota-grid stagger">
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="A"><img src="asset/galeri/profil/bp22/Anggie%20Ariani%20Fitria.jpg" alt="Anggie Ariani Fitria" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Anggie Ariani Fitria</div><div class="kelas">BP 22</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="B"><img src="asset/galeri/profil/bp22/Bunga%20Dwi%20Laversi.jpg" alt="Bunga Dwi Laversi" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Bunga Dwi Laversi</div><div class="kelas">BP 22</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="E"><img src="asset/galeri/profil/bp22/Elva%20Laylatul%20Aysha.jpg" alt="Elva Laylatul Aysha" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Elva Laylatul Aysha</div><div class="kelas">BP 22</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="M"><img src="asset/galeri/profil/bp22/Mohd.Haikal.jpg" alt="Mohd. Haikal" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Mohd. Haikal</div><div class="kelas">BP 22</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="M"><img src="asset/galeri/profil/bp22/Muhammad%20Najib%20Irsyad%20Ramadhan.jpg" alt="Muhammad Najib Irsyad Ramadhan" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">M. Najib Irsyad Ramadhan</div><div class="kelas">BP 22</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="R"><img src="asset/galeri/profil/bp22/Rayhan%20Kemal%20Muzakky.jpg" alt="Rayhan Kemal Muzakky" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Rayhan Kemal Muzakky</div><div class="kelas">BP 22</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="S"><img src="asset/galeri/profil/bp22/Sri%20Winanda.jpg" alt="Sri Winanda" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Sri Winanda</div><div class="kelas">BP 22</div></div></div>
+        </div>
+      </div>
+
+            <!-- ★ BP 23 ★ -->
+      <div class="bp-panel" id="bp23">
+        <div class="group-banner reveal" data-bp="BP23">
+          <div class="tahun">Angkatan 2023</div>
+          <h2>Anggota MPK BP 23</h2>
+          <p>Generasi terkini yang membawa semangat baru dalam kepemimpinan MPK SMK SMTI Padang</p>
+        </div>
+        <div class="ketua-featured reveal">
+          <div class="ketua-avatar"><img src="asset/galeri/profil/bp23/Ahlan%20Napria.jpg" alt="Ahlan Napria" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+          <div><div class="jabatan">⭐ Ketua MPK BP 23</div><h3>Ahlan Napria</h3><p>Memimpin MPK periode 2024/2025 dengan visi membangun organisasi yang lebih kuat, transparan, dan berdampak nyata bagi seluruh siswa SMK SMTI Padang.</p></div>
+        </div>
+        <div class="anggota-grid stagger">
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="K"><img src="asset/galeri/profil/bp23/Keisha%20Alika%20Izzati.jpg" alt="Keisha Alika Izzati" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Keisha Alika Izzati</div><div class="kelas">BP 23</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="K"><img src="asset/galeri/profil/bp23/keysa%20Pavela%20Riani%20Putri.jpg" alt="Keysa Pavela Riani Putri" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Keysa Pavela Riani Putri</div><div class="kelas">BP 23</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="N"><img src="asset/galeri/profil/bp23/Nazhwa%20Latifa%20Irandti.jpg" alt="Nazhwa Latifa Irandti" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Nazhwa Latifa Irandti</div><div class="kelas">BP 23</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="P"><img src="asset/galeri/profil/bp23/Putri%20Aisyah.jpg" alt="Putri Aisyah" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Putri Aisyah</div><div class="kelas">BP 23</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="T"><img src="asset/galeri/profil/bp23/Tengku%20Alief%20Ahmadinejat.jpg" alt="Tengku Alief Ahmadinejat" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Tengku Alief Ahmadinejat</div><div class="kelas">BP 23</div></div></div>
+        </div>
+      </div>
+
+            <!-- ★ BP 24 ★ -->
+      <div class="bp-panel" id="bp24">
+        <div class="group-banner reveal" data-bp="BP24">
+          <div class="tahun">Angkatan 2024</div>
+          <h2>Anggota MPK BP 24</h2>
+          <p>Generasi baru yang siap melanjutkan estafet kepemimpinan MPK SMK SMTI Padang</p>
+        </div>
+        <div class="ketua-featured reveal">
+          <div class="ketua-avatar"><img src="asset/galeri/profil/bp24/Siswandi%20HIdayat.jpeg" alt="Siswandi Hidayat" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+          <div><div class="jabatan">⭐ Ketua MPK BP 24</div><h3>Siswandi Hidayat</h3><p>Memimpin MPK periode angkatan 2024 dengan semangat perubahan dan komitmen tinggi terhadap kemajuan organisasi siswa.</p></div>
+        </div>
+        <div class="anggota-grid stagger">
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="A"><img src="asset/galeri/profil/bp24/Aisha%20Zafirah%20Zadah.jpeg" alt="Aisha Zafirah Zadah" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Aisha Zafirah Zadah</div><div class="kelas">BP 24</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="A"><img src="asset/galeri/profil/bp24/Aisyah%20Sahra%20Qolbi.jpeg" alt="Aisyah Sahra Qolbi" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Aisyah Sahra Qolbi</div><div class="kelas">BP 24</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="F"><img src="asset/galeri/profil/bp24/Fachri%20Addriansyah%20.jpeg" alt="Fachri Addriansyah" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Fachri Addriansyah</div><div class="kelas">BP 24</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="H"><img src="asset/galeri/profil/bp24/Haniffah%20Fajrina.jpeg" alt="Haniffah Fajrina" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Haniffah Fajrina</div><div class="kelas">BP 24</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="M"><img src="asset/galeri/profil/bp24/Muhamad%20Zulfajri.JPG" alt="Muhamad Zulfajri" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Muhamad Zulfajri</div><div class="kelas">BP 24</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="N"><img src="asset/galeri/profil/bp24/Nada%20Carissa%20Putri%20.jpeg" alt="Nada Carissa Putri" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Nada Carissa Putri</div><div class="kelas">BP 24</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="R"><img src="asset/galeri/profil/bp24/Rifhad%20Zhyvano.jpeg" alt="Rifhad Zhyvano" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Rifhad Zhyvano</div><div class="kelas">BP 24</div></div></div>
+        </div>
+      </div>
+
+            <!-- ★ BP 25 ★ -->
+      <div class="bp-panel" id="bp25">
+        <div class="group-banner reveal" data-bp="BP25">
+          <div class="tahun">Angkatan 2025</div>
+          <h2>Anggota MPK BP 25</h2>
+          <p>Angkatan terbaru yang akan meneruskan tradisi kepemimpinan MPK SMK SMTI Padang</p>
+        </div>
+        <div class="ketua-featured reveal">
+          <div class="ketua-avatar"><img src="asset/galeri/profil/bp25/Dimas%20Febrido.jpeg" alt="Dimas Febrido" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+          <div><div class="jabatan">⭐ Wakil Ketua MPK BP 25</div><h3>Dimas Febrido</h3><p>Wakil Ketua MPK BP 25 yang siap memimpin dengan semangat dan tekad kuat untuk memajukan SMK SMTI Padang.</p></div>
+        </div>
+        <div class="anggota-grid stagger">
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="A"><img src="asset/galeri/profil/bp25/Arbi%20Aditya.jpeg" alt="Arbi Aditya" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Arbi Aditya</div><div class="kelas">BP 25</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="G"><img src="asset/galeri/profil/bp25/Girlsefa%20Qhayra%20Prima.jpeg" alt="Girlsefa Qhayra Prima" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Girlsefa Qhayra Prima</div><div class="kelas">BP 25</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="N"><img src="asset/galeri/profil/bp25/Nabil%20Alfajri.jpeg" alt="Nabil Alfajri" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Nabil Alfajri</div><div class="kelas">BP 25</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="N"><img src="asset/galeri/profil/bp25/Nayla%20Putri%20Deandrosse.jpeg" alt="Nayla Putri Deandrosse" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Nayla Putri Deandrosse</div><div class="kelas">BP 25</div></div></div>
+          <div class="anggota-card-p"><div class="anggota-foto-wrap" data-init="S"><img src="asset/galeri/profil/bp25/Shafira%20Dwi%20Putri.jpeg" alt="Shafira Dwi Putri" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div><div class="anggota-info"><div class="jabatan">Anggota</div><div class="nama">Shafira Dwi Putri</div><div class="kelas">BP 25</div></div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ★ FITUR: HUBUNGI KAMI ★ -->
+    <section class="kontak-section">
+    <div class="container">
+      <div class="kontak-label-row reveal">
+        <span class="kontak-dash">——</span>
+        <span class="kontak-label-text">HUBUNGI KAMI</span>
+      </div>
+      <h2 class="section-judul reveal" style="color:#fff;margin-bottom:.5rem;">Kontak &amp; Lokasi</h2>
+      <p class="reveal" style="color:rgba(255,255,255,.55);margin-bottom:2rem;">Hubungi kami untuk informasi kegiatan atau bergabung menjadi anggota.</p>
+      <div class="sekretariat-card reveal">
+        <h3 class="sekretariat-title">Sekretariat MPK</h3>
+        <div class="sekretariat-row">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">📍</span></div>
+          <div><div class="sekretariat-key">ALAMAT</div><div class="sekretariat-val">Jl. Ir. H. Juanda No.2, Padang Barat, Kota Padang, Sumatera Barat 25129</div></div>
+        </div>
+        <div class="sekretariat-row">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">🏫</span></div>
+          <div><div class="sekretariat-key">SEKOLAH</div><div class="sekretariat-val">SMK SMTI Padang — Kementerian Perindustrian RI</div></div>
+        </div>
+        <div class="sekretariat-row">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">📷</span></div>
+          <div><div class="sekretariat-key">INSTAGRAM</div><div class="sekretariat-val">@mpk_smksmtipadang</div></div>
+        </div>
+        <div class="sekretariat-row">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">✉️</span></div>
+          <div><div class="sekretariat-key">EMAIL</div><div class="sekretariat-val">mpksmksmtipadang@gmail.com</div></div>
+        </div>
+        <div class="sekretariat-row" style="border-bottom:none;">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">🕐</span></div>
+          <div><div class="sekretariat-key">JAM AKTIF</div><div class="sekretariat-val">Senin – Jumat, 07.30 – 15.30 WIB</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer><div class="footer-inner"><div class="footer-brand"><h3>MPK SMK SMTI Padang</h3><p>Jl. Ir. H. Juanda No.2, Padang · Telp. (0751) 705322</p></div><div class="footer-col"><h4>Halaman</h4><a href="#beranda" data-page="beranda">Beranda</a><a href="#tentang" data-page="tentang">Tentang</a><a href="#struktur" data-page="struktur">Struktur</a></div><div class="footer-col"><h4>Lainnya</h4><a href="#pemiltos" data-page="pemiltos">Pemiltos</a><a href="#keseruan" data-page="keseruan">Keseruan</a><a href="#form-osis" data-page="form-osis">Form OSIS</a></div></div><div class="footer-bottom"><span>© 2025 MPK SMK SMTI Padang.</span><span>Periode 2024/2025</span></div></footer>
+</div><!-- /page-profil -->
+
+<!-- ================================================================
+     ★ HALAMAN 6: KESERUAN MPK
+     Fitur: Statistik · Galeri kegiatan (bisa diisi foto nyata)
+            Hubungi Kami · Footer
+     ================================================================ -->
+<div id="page-keseruan" class="page-panel page-wrap">
+  <div class="page-hero" data-title="KESERUAN">
+    <div class="container">
+      <span class="section-tag">Dokumentasi Kegiatan</span>
+      <h1><em>Keseruan</em> MPK<br>SMTI Padang</h1>
+      <p>Momen-momen berkesan dan kegiatan seru bersama anggota MPK SMK SMTI Padang.</p>
+    </div>
+  </div>
+
+  <section class="section alt">
+    <div class="container">
+      <!-- ★ FITUR: STATISTIK KEGIATAN ★ -->
+      <div class="highlight-row stagger">
+        <div class="hl-stat"><div class="num">4+</div><div class="label">Kegiatan Utama</div></div>
+        <div class="hl-stat"><div class="num">6</div><div class="label">Angkatan</div></div>
+        <div class="hl-stat"><div class="num">1</div><div class="label">Periode Aktif</div></div>
+        <div class="hl-stat"><div class="num">2025</div><div class="label">Tahun</div></div>
+      </div>
+
+      <!-- ★ FITUR: GALERI KEGIATAN (ganti dengan foto nyata via <img>) ★ -->
+      <div class="kegiatan-block reveal">
+        <div class="kegiatan-header"><h3>Seleksi Calon Ketua dan Wakil Ketua OSIS</h3><span>2024/2025</span></div>
+        <div class="foto-grid stagger">
+          <div class="foto-card v1" data-num="📸" data-label="Rapat Seleksi"><!-- <img src="foto/kegiatan/seleksi-1.jpg" alt="Rapat Seleksi"> --></div>
+          <div class="foto-card v1" data-num="📸" data-label="Wawancara Calon"><!-- <img src="foto/kegiatan/seleksi-2.jpg" alt="Wawancara"> --></div>
+          <div class="foto-card v1" data-num="📸" data-label="Pengumuman Lolos"><!-- <img src="foto/kegiatan/seleksi-3.jpg" alt="Pengumuman"> --></div>
+          <div class="foto-card v1" data-num="📸" data-label="Dokumentasi Seleksi"><!-- <img src="foto/kegiatan/seleksi-4.jpg" alt="Dokumentasi"> --></div>
+        </div>
+      </div>
+      <div class="kegiatan-block reveal">
+        <div class="kegiatan-header"><h3>Pelatihan Kepemimpinan (PKO-PKM)</h3><span>2024/2025</span></div>
+        <div class="foto-grid stagger">
+          <div class="foto-card v2" data-num="📸" data-label="Pembukaan PKO"><!-- <img src="foto/kegiatan/pko-1.jpg" alt="Pembukaan"> --></div>
+          <div class="foto-card v2" data-num="📸" data-label="Materi Kepemimpinan"><!-- <img src="foto/kegiatan/pko-2.jpg" alt="Materi"> --></div>
+          <div class="foto-card v2" data-num="📸" data-label="Games &amp; Ice Breaking"><!-- <img src="foto/kegiatan/pko-3.jpg" alt="Games"> --></div>
+          <div class="foto-card v2" data-num="📸" data-label="Penutupan PKM"><!-- <img src="foto/kegiatan/pko-4.jpg" alt="Penutupan"> --></div>
+        </div>
+      </div>
+      <div class="kegiatan-block reveal">
+        <div class="kegiatan-header"><h3>Rapat Pleno MPK</h3><span>2024/2025</span></div>
+        <div class="foto-grid stagger">
+          <div class="foto-card v3" data-num="📸" data-label="Rapat Pleno I"></div>
+          <div class="foto-card v3" data-num="📸" data-label="Evaluasi OSIS"></div>
+          <div class="foto-card v3" data-num="📸" data-label="Laporan Tengah Jabatan"></div>
+          <div class="foto-card v3" data-num="📸" data-label="Dokumentasi Rapat"></div>
+        </div>
+      </div>
+      <div class="kegiatan-block reveal">
+        <div class="kegiatan-header"><h3>Momen Kebersamaan</h3><span>Semua Angkatan</span></div>
+        <div class="foto-grid stagger">
+          <div class="foto-card v4" data-num="📸" data-label="Foto Bersama BP 25"></div>
+          <div class="foto-card v4" data-num="📸" data-label="Foto Bersama BP 24"></div>
+          <div class="foto-card v4" data-num="📸" data-label="Foto Bersama BP 23"></div>
+          <div class="foto-card v4" data-num="📸" data-label="Foto Bersama BP 22"></div>
+          <div class="foto-card v1" data-num="📸" data-label="Foto Bersama BP 21"></div>
+          <div class="foto-card v2" data-num="📸" data-label="Foto Bersama BP 20"></div>
+        </div>
+      </div>
+      <div style="text-align:center;padding-top:1rem;" class="reveal">
+        <p style="color:var(--teks-abu);font-size:.9rem;">Tambahkan foto-foto kegiatan Anda di sini untuk melengkapi galeri.</p>
+        <a href="#form-osis" data-page="form-osis" class="btn-biru" style="margin-top:1rem;display:inline-flex;">Laporkan ke MPK</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: HUBUNGI KAMI ★ -->
+  <section class="kontak-section"><div class="container"><span class="section-tag">Hubungi Kami</span><h2 class="section-judul">Kontak &amp; Lokasi</h2><div class="kontak-grid stagger"><div class="kontak-card"><div class="kontak-ikon">📍</div><h4>Alamat</h4><p>Jl. Ir. H. Juanda No.2<br>Padang, Sumatera Barat</p></div><div class="kontak-card"><div class="kontak-ikon">📞</div><h4>Telepon</h4><p>(0751) 705322<br>Fax. 075141924</p></div><div class="kontak-card"><div class="kontak-ikon">✉️</div><h4>Aspirasi</h4><p>Sampaikan masukan melalui Form OSIS</p><a href="#form-osis" data-page="form-osis">Buka Form →</a></div></div></div></section>
+  <footer><div class="footer-inner"><div class="footer-brand"><h3>MPK SMK SMTI Padang</h3><p>Jl. Ir. H. Juanda No.2, Padang · Telp. (0751) 705322</p></div><div class="footer-col"><h4>Halaman</h4><a href="#beranda" data-page="beranda">Beranda</a><a href="#tentang" data-page="tentang">Tentang</a><a href="#struktur" data-page="struktur">Struktur</a></div><div class="footer-col"><h4>Lainnya</h4><a href="#profil" data-page="profil">Profil</a><a href="#pemiltos" data-page="pemiltos">Pemiltos</a><a href="#form-osis" data-page="form-osis">Form OSIS</a></div></div><div class="footer-bottom"><span>© 2025 MPK SMK SMTI Padang.</span><span>Periode 2024/2025</span></div></footer>
+</div><!-- /page-keseruan -->
+
+
+<!-- ================================================================
+     ★ HALAMAN 7: FORM OSIS
+     Fitur: Hero · Google Form embed (dari GFORM.osis di script.js)
+            Fallback form manual · Info cards · Hubungi Kami + Peta
+     ================================================================ -->
+<div id="page-form-osis" class="page-panel page-wrap">
+
+  <!-- ★ FITUR: HERO FORM OSIS ★ -->
+  <div class="form-hero-pg">
+    <div style="position:relative;z-index:1;" class="container">
+      <span class="section-tag">Form Pelaporan</span>
+      <h1>Form <em>OSIS</em></h1>
+      <p>Sampaikan laporan, masukan, atau pengaduan terkait kinerja OSIS kepada MPK melalui formulir berikut.</p>
+    </div>
+  </div>
+
+  <!-- ★ FITUR: GOOGLE FORM EMBED (OSIS) ★ -->
+  <section class="section">
+    <div class="container">
+      <span class="section-tag reveal">Formulir Laporan</span>
+      <h2 class="section-judul reveal">Sampaikan Aspirasimu</h2>
+      <p class="section-sub reveal" style="margin-bottom:1.5rem;">
+        Isi formulir di bawah ini atau langsung di Google Form kami. Admin: isi <code>GFORM.osis</code> di <strong>script.js</strong>.
+      </p>
+
+      <!-- Google Form embed — diisi oleh JS -->
+      <div class="gform-osis-wrap reveal" id="gform-osis-wrap">
+        <!-- Fallback ditampilkan oleh script.js jika GFORM.osis kosong -->
+      </div>
+
+      <!-- ★ FITUR: FORM MANUAL (fallback jika Google Form belum dikonfigurasi) ★ -->
+      <div id="fallback-form-manual" style="display:none;margin-top:2rem;">
+        <div class="form-card">
+          <h2 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--teks);margin-bottom:.25rem;">Formulir Laporan OSIS</h2>
+          <p style="font-size:.875rem;color:var(--teks-abu);margin-bottom:1.75rem;">Isi formulir dengan lengkap dan jujur. Laporan Anda akan ditindaklanjuti oleh MPK.</p>
+          <hr class="form-divider">
+          <form id="form-laporan-manual" onsubmit="kirimFormManual(event)">
+            <div class="form-row">
+              <div class="form-group"><label>Nama Lengkap <span>*</span></label><input type="text" placeholder="Nama lengkap Anda" required></div>
+              <div class="form-group"><label>Kelas / NIS <span>*</span></label><input type="text" placeholder="Contoh: XII KI 1 / 2024001" required></div>
+            </div>
+            <div class="form-group"><label>Jenis Laporan <span>*</span></label>
+              <select required><option value="" disabled selected>Pilih jenis laporan...</option><option>Laporan Kegiatan OSIS</option><option>Pengaduan Kinerja OSIS</option><option>Masukan Program Kerja</option><option>Aspirasi Siswa</option><option>Lainnya</option></select>
+            </div>
+            <div class="form-group"><label>Judul Laporan <span>*</span></label><input type="text" placeholder="Tuliskan judul singkat laporan Anda" required></div>
+            <div class="form-group"><label>Isi Laporan <span>*</span></label><textarea placeholder="Tuliskan laporan Anda secara lengkap dan jelas..." required></textarea></div>
+            <div class="form-group"><label>Tanggal Kejadian</label><input type="date"></div>
+            <button type="submit" class="submit-btn">Kirim Laporan ke MPK</button>
+          </form>
+          <div class="success-msg" id="form-success-msg">✅ Laporan Anda berhasil dikirim! MPK akan menindaklanjuti dalam waktu dekat.</div>
+        </div>
+      </div>
+
+      <!-- ★ FITUR: INFO CARDS JAMINAN ★ -->
+      <div class="info-grid stagger" style="margin-top:3rem;">
+        <div class="info-card"><div class="info-icon">🔒</div><h4>Kerahasiaan Terjaga</h4><p>Identitas pelapor dijaga kerahasiaannya oleh MPK.</p></div>
+        <div class="info-card"><div class="info-icon">⚡</div><h4>Respons Cepat</h4><p>MPK berkomitmen menindaklanjuti setiap laporan dengan segera.</p></div>
+        <div class="info-card"><div class="info-icon">📊</div><h4>Laporan Tercatat</h4><p>Setiap laporan dicatat dan dijadikan bahan evaluasi resmi MPK.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ★ FITUR: HUBUNGI KAMI + PETA ★ -->
+    <section class="kontak-section">
+    <div class="container">
+      <div class="kontak-label-row">
+        <span class="kontak-dash">——</span>
+        <span class="kontak-label-text">HUBUNGI KAMI</span>
+      </div>
+      <h2 class="section-judul" style="color:#fff;margin-bottom:.5rem;">Kontak &amp; Lokasi</h2>
+      <p style="color:rgba(255,255,255,.55);margin-bottom:2rem;">Hubungi kami untuk informasi kegiatan atau bergabung menjadi anggota.</p>
+      <div class="sekretariat-card">
+        <h3 class="sekretariat-title">Sekretariat MPK</h3>
+        <div class="sekretariat-row">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">📍</span></div>
+          <div><div class="sekretariat-key">ALAMAT</div><div class="sekretariat-val">Jl. Ir. H. Juanda No.2, Padang Barat, Kota Padang, Sumatera Barat 25129</div></div>
+        </div>
+        <div class="sekretariat-row">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">🏫</span></div>
+          <div><div class="sekretariat-key">SEKOLAH</div><div class="sekretariat-val">SMK SMTI Padang — Kementerian Perindustrian RI</div></div>
+        </div>
+        <div class="sekretariat-row">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">📷</span></div>
+          <div><div class="sekretariat-key">INSTAGRAM</div><div class="sekretariat-val">@mpk_smksmtipadang</div></div>
+        </div>
+        <div class="sekretariat-row">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">✉️</span></div>
+          <div><div class="sekretariat-key">EMAIL</div><div class="sekretariat-val">mpksmksmtipadang@gmail.com</div></div>
+        </div>
+        <div class="sekretariat-row" style="border-bottom:none;">
+          <div class="sekretariat-icon-wrap"><span class="sekretariat-icon">🕐</span></div>
+          <div><div class="sekretariat-key">JAM AKTIF</div><div class="sekretariat-val">Senin – Jumat, 07.30 – 15.30 WIB</div></div>
+        </div>
+      </div>
+      <div class="kontak-map" style="margin-top:2rem;">
+        <iframe src="https://maps.app.goo.gl/ALAySb3ce9pXyv7AA" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi SMK SMTI Padang"></iframe>
+      </div>
+    </div>
+  </section>
+  <footer><div class="footer-inner"><div class="footer-brand"><h3>MPK SMK SMTI Padang</h3><p>Majelis Permusyawaratan Kelas<br>SMK SMTI Padang · Jl. Ir. H. Juanda No.2, Padang<br>Telp. (0751) 705322 · Fax. 075141924</p></div><div class="footer-col"><h4>Halaman</h4><a href="#beranda" data-page="beranda">Beranda</a><a href="#tentang" data-page="tentang">Tentang MPK</a><a href="#struktur" data-page="struktur">Struktur</a></div><div class="footer-col"><h4>Lainnya</h4><a href="#profil" data-page="profil">Profil Anggota</a><a href="#pemiltos" data-page="pemiltos">Pemiltos</a><a href="#keseruan" data-page="keseruan">Keseruan</a></div></div><div class="footer-bottom"><span>© 2025 MPK SMK SMTI Padang. Seluruh hak dilindungi.</span><span>Periode 2024/2025</span></div></footer>
+</div><!-- /page-form-osis -->
+
+
+<!-- ================================================================
+     JAVASCRIPT
+     ================================================================ -->
+<script src="script.js"></script>
+<script>
+/* Logika tambahan: tampilkan fallback form manual jika GFORM.osis kosong */
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    var wrap = document.getElementById('gform-osis-wrap');
+    if (wrap && wrap.querySelector('.form-placeholder')) {
+      var fallback = document.getElementById('fallback-form-manual');
+      if (fallback) fallback.style.display = 'block';
+    }
+  }, 300);
+});
+</script>
+
+</body>
+</html>
